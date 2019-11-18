@@ -1,12 +1,14 @@
 package com.example.gamebacklog.ui.add
 
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.gamebacklog.R
+import com.example.gamebacklog.model.Game
 import com.example.gamebacklog.model.Game.Companion.months
 
 import kotlinx.android.synthetic.main.activity_add.*
@@ -89,6 +91,19 @@ class AddActivity : AppCompatActivity() {
             } else null
         } catch (e: Exception) {
             null
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        return when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }
