@@ -1,4 +1,4 @@
-package com.example.notepad.ui
+package com.example.notepad.ui.main
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
